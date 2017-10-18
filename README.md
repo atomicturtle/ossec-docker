@@ -10,36 +10,30 @@ send alert notifications.
   
 **Launch:**
 
-        docker run -d -p 1514:1514/udp -p 1515:1515/tcp --name ossec-server <image>
-
+    docker run -d -p 1514:1514/udp -p 1515:1515/tcp --name ossec-server atomicorp/ossec-docker
 
 **Launch with a specified Volume:**
 
 
-	docker volume create ossec-data
-
-
-        docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server atomicorp/ossec-docker
+    docker volume create --name ossec-data
+    docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server atomicorp/ossec-docker
 
 
 **Stopping:**
 
-       docker stop ossec-server
+    docker stop ossec-server
 
 **Re-start:**
 
-       docker start ossec-server
-
+    docker start ossec-server
 
 **Attach to running:**
 
-        docker exec -it ossec-server  bash
-
+    docker exec -it ossec-server  bash
 
 **Thanks:**
 
-        Dan Parriott, too many things to list!
-
-        Xetus OSS for the original OSSEC Docker project: https://github.com/xetus-oss/docker-ossec-server
+Dan Parriott, too many things to list!
+Xetus OSS for the original OSSEC Docker project: https://github.com/xetus-oss/docker-ossec-server
 
 
