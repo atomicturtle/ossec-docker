@@ -10,7 +10,7 @@ send alert notifications.
   
 **Launch:**
 
-    docker run -d -p 1514:1514/udp -p 1515:1515/tcp --name ossec-server <image>
+    docker run -d -p 1514:1514/udp -p 1515:1515/tcp --name ossec-server atomicorp/ossec-docker
 
 **Launch with a specified Volume:**
 
