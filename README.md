@@ -15,7 +15,7 @@ send alert notifications.
 **Launch with a specified Volume:**
 
 
-    docker volume create ossec-data
+    docker volume create --name ossec-data
     docker run -d -p 1514:1514/udp -p 1515:1515/tcp -v ossec-data:/var/ossec/data --name ossec-server atomicorp/ossec-docker
 
 
